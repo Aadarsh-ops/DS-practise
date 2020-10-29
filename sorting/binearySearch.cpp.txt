@@ -16,5 +16,7 @@ int main() {
    int n = sizeof(arry) / sizeof(arry[0]); 
   int result = binearySearch(arry,0,n-1,8)  ;
 
-  std::cout << result;
+  if(result == -1)
+  std::cout <<  "Element is not present in array";
+  else  std::cout <<  "Element is not present in array"<<result;
 }
