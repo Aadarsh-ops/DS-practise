@@ -1,4 +1,4 @@
- let s="aaaabbbccd";
+ let s="aaaabbbccdde";
  let size =s.length;
 compressTheString(s,size);
 
