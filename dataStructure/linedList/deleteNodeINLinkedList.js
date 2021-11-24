@@ -18,5 +18,4 @@ var deleteNode = function(node) {
          node = node.next;   
       }
       }
-    
 };
