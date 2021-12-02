@@ -12,8 +12,9 @@
  */
 var addTwoNumbers = function(l1, l2) {
     let count,total =0,carry = 0
-    let l = l1;
-    while (l1 && l1.val && l2 && l2.val){
+    let l = new ListNode(0);
+    let list = l;
+    while ( l1  && l2){
     total = l1.val + l2.val + carry;
         if(total > 9){
             while(total>9){
@@ -23,13 +24,15 @@ var addTwoNumbers = function(l1, l2) {
         }else{
             carry = 0;
         }
-        l1.val = total;
-           if(l1.next) l1 = l1.next;
-           if(l2.next) l2 = l2.next;
+        let node = new ListNode(total);
+        l.next = node;
+        l = l.next;
+              l1 = l1.next;
+              l2 = l2.next;
     }
-    if(l2) l1 = l2;
-    while(l1 && l1.val){
-            total = l1.val + carry;
+    let l3 = l1 || l2;
+    while(l3){
+            total = l3.val + carry;
         if(total > 9){
             while(total>9){
                 total = total % 10;
@@ -38,13 +41,16 @@ var addTwoNumbers = function(l1, l2) {
         }else{
             carry = 0;
         }
-        l1.val = total;
-        if(l1.next)
-        l1 = l1.next;
+         let node = new ListNode(total);
+        l.next = node;
+        l = l.next;
+        l3 = l3.next;
+      
     }
     if(carry){
-        let node = new ListNode(1);
-        l1.next = node;
+        let node = new ListNode(carry)
+        l.next = node;
+        l = l.next;
     }
-    return l;
+    return list.next;
 };
