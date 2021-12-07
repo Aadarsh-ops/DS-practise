@@ -20,5 +20,4 @@ var deleteMiddle = function(head) {
     }
     if(curr.next) curr.next = curr.next.next;
     return head;
-    
-};
+};z
