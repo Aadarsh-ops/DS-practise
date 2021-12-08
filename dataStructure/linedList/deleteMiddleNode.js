@@ -19,5 +19,5 @@ var deleteMiddle = function(head) {
         curr = curr.next;
     }
     if(curr.next) curr.next = curr.next.next;
-    return head;
+    return head
 };z
