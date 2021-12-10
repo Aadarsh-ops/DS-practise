@@ -27,5 +27,5 @@ var nextLargerNodes = function(head) {
         }
         head = head.next
     }
-    return arr;
+    return arr
 };
