@@ -2,7 +2,8 @@ var addBinary = function(a, b) {
     let i = a.length-1;
     let j = b.length-1;
     let carry = 0;
-    let res ="";
+    let res ="
+      ";
     while(i>=0||j>=0){
        let sum = carry;
        if(i>=0)
